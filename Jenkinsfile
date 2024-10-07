@@ -7,15 +7,9 @@ pipeline
     {
       steps
       {
-      echo "[step] building...."
-      bat="dotnet restore /src/helloworld/helloword.csproj"
-      bat="dotnet clean /src/helloworld/helloword.csproj"
-      bat="dotnet build /src/helloworld/helloword.csproj"
-      archiveArtifacts artifacts: "src/helloword/bin/**" 
+        echo "[step] building..."
       }
     }
-    stages
-   {
     stage("test")
     {
       steps
@@ -23,9 +17,7 @@ pipeline
         echo "[step] testing..."
       }
     }
-stages
-  {
-    stage("deploy")
+    stage("depoly")
     {
       steps
       {
@@ -34,3 +26,4 @@ stages
     }
   }
 }
+
