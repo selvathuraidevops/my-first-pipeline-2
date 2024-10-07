@@ -27,10 +27,3 @@ pipeline
   }
 }
 
-post
-{
-  failure
-  {
-    echo "the build has failed"
-  }
-}
